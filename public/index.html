@@ -857,6 +857,171 @@ footer{background:var(--char);border-top:1px solid rgba(201,168,108,.1);padding:
     height:58px;
     font-size:30px;
 }
+/* =========================================================
+   MOBILE RESPONSIVE FIX (320px - 768px)
+========================================================= */
+
+@media screen and (max-width:768px){
+
+/* General */
+
+section{
+    padding:70px 20px;
+}
+
+.container{
+    width:100%;
+    max-width:100%;
+    padding:0 20px;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+}
+
+.hero-content{
+    width:100%;
+    padding-top:120px;
+}
+
+.hero-title{
+    font-size:60px !important;
+    line-height:1;
+}
+
+.hero-subtitle,
+.hero-description{
+    width:100%;
+    font-size:18px;
+}
+
+.hero-buttons{
+    flex-direction:column;
+    gap:18px;
+}
+
+.hero-buttons a{
+    width:100%;
+    text-align:center;
+}
+
+/* CAMERA TRIGGER */
+
+.camera-trigger{
+    height:75vh !important;
+    min-height:600px;
+    overflow:hidden;
+}
+
+.camera-trigger img,
+.camera,
+.camera-image{
+    width:240px !important;
+    max-width:70vw;
+    left:50% !important;
+    top:52% !important;
+    transform:translate(-50%,-50%) !important;
+}
+
+.focus-ring{
+    width:280px !important;
+    height:280px !important;
+    left:50% !important;
+    top:52% !important;
+    transform:translate(-50%,-50%);
+}
+
+.corner{
+    transform:scale(.8);
+}
+
+/* STATS */
+
+.stats-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.stat-card{
+    width:100%;
+}
+
+/* WHY CHOOSE US */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+}
+
+.why-card{
+    width:100%;
+    padding:35px 25px;
+}
+
+/* ABOUT */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:40px;
+}
+
+/* PORTFOLIO */
+
+.portfolio-grid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+.portfolio-grid img{
+    width:100%;
+    aspect-ratio:4/5;
+    object-fit:cover;
+}
+
+/* SERVICES */
+
+.services-grid{
+    grid-template-columns:1fr;
+}
+
+/* TESTIMONIAL */
+
+.testimonial-grid{
+    grid-template-columns:1fr;
+}
+
+/* CONTACT */
+
+.contact-grid{
+    grid-template-columns:1fr;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+}
+
+/* FOOTER */
+
+.footer-content{
+    flex-direction:column;
+    text-align:center;
+}
+
+/* WhatsApp */
+
+.whatsapp-float{
+    right:18px;
+    bottom:85px;
+}
+
+}
 
 }
 </style>
@@ -922,7 +1087,7 @@ footer{background:var(--char);border-top:1px solid rgba(201,168,108,.1);padding:
 
   <!-- Stats -->
   <div class="stats">
-    <div class="stat"><div class="stat-n">500+</div><div class="stat-l">Weddings</div></div>
+    <div class="stat"><div class="stat-n">100+</div><div class="stat-l">Weddings</div></div>
     <div class="stat-div"></div>
     <div class="stat"><div class="stat-n">8+</div><div class="stat-l">Years</div></div>
     <div class="stat-div"></div>
