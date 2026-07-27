@@ -698,13 +698,23 @@ nav{
 /* WHATSAPP */
 
 .whatsapp-float{
-    width:58px;
-    height:58px;
-    right:18px;
-    bottom:18px;
-    font-size:30px;
+    position: fixed;
+    right: 20px;
+    bottom: max(20px, env(safe-area-inset-bottom));
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 32px;
+    box-shadow: 0 8px 25px rgba(0,0,0,.35);
+    z-index: 9999;
+    transition: .3s ease;
 }
-
 }
 }
 /* ==========================
@@ -837,6 +847,17 @@ footer{background:var(--char);border-top:1px solid rgba(201,168,108,.1);padding:
   .stats{padding:2rem 1.5rem}
   .form-row{grid-template-columns:1fr}
   .social-row{flex-wrap:wrap}
+}
+@media (max-width:768px){
+
+.whatsapp-float{
+    right:16px;
+    bottom:90px;
+    width:58px;
+    height:58px;
+    font-size:30px;
+}
+
 }
 </style>
 </head>
