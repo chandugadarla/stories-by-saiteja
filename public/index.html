@@ -158,7 +158,12 @@ nav.scrolled{background:rgba(8,7,6,.92);backdrop-filter:blur(12px);padding:1rem 
 
 .port-grid{padding:4rem 3.5rem;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .port-item{overflow:hidden;position:relative;aspect-ratio:4/3;cursor:none}
-.port-item img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.25,.46,.45,.94)}
+.port-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+}
 .port-item:hover img{transform:scale(1.07)}
 .port-overlay{position:absolute;inset:0;background:linear-gradient(transparent 40%,rgba(8,7,6,.9));opacity:0;transition:opacity .4s;display:flex;flex-direction:column;justify-content:flex-end;padding:1.5rem}
 .port-item:hover .port-overlay{opacity:1}
@@ -535,6 +540,171 @@ height:50vh;
     pointer-events:none;
 
     z-index:0;
+}
+/* =========================================================
+   MOBILE FIXES (Phones)
+   ========================================================= */
+
+@media screen and (max-width:768px){
+
+html,body{
+    overflow-x:hidden;
+    width:100%;
+}
+
+/* NAVBAR */
+nav{
+    padding:15px 20px !important;
+}
+
+.nav-brand{
+    font-size:2rem !important;
+}
+
+.hamburger{
+    transform:scale(.9);
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+    height:auto;
+}
+
+.hero-content{
+    padding:120px 24px 60px !important;
+}
+
+.hero-title{
+    font-size:clamp(3rem,13vw,4.5rem)!important;
+    line-height:1.05;
+}
+
+.hero-sub{
+    font-size:1.05rem;
+    width:100%;
+    max-width:100%;
+}
+
+.hero-btns{
+    flex-direction:column;
+    width:100%;
+}
+
+.btn-primary,
+.btn-outline{
+    width:100%;
+    text-align:center;
+}
+
+/* CAMERA */
+
+.camera-trigger{
+    height:80vh;
+}
+
+.camera-img{
+    width:70vw !important;
+    left:50% !important;
+    top:55% !important;
+    transform:translate(-50%,-50%) scale(.8)!important;
+}
+
+.focus-ring{
+    left:50% !important;
+}
+
+/* STATS */
+
+.stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:30px;
+}
+
+.stat-div{
+    display:none;
+}
+
+/* PREVIEW GRID */
+
+.pgrid{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:18px;
+}
+
+.pi,
+.port-item{
+    aspect-ratio:4/5 !important;
+}
+
+.pi img,
+.port-item img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ABOUT */
+
+.about-body-sec{
+    grid-template-columns:1fr;
+    gap:50px;
+}
+
+/* SERVICES */
+
+.srv-grid{
+    grid-template-columns:1fr;
+}
+
+/* WHY */
+
+.why-grid{
+    grid-template-columns:1fr;
+}
+
+/* JOURNEY */
+
+.journey-items{
+    grid-template-columns:1fr;
+}
+
+/* CONTACT */
+
+.con-body{
+    grid-template-columns:1fr;
+}
+
+.form-row{
+    grid-template-columns:1fr;
+}
+
+/* FOOTER */
+
+.footer-top,
+.footer-bottom{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+}
+
+.footer-nav{
+    justify-content:center;
+}
+
+/* WHATSAPP */
+
+.whatsapp-float{
+    width:58px;
+    height:58px;
+    right:18px;
+    bottom:18px;
+    font-size:30px;
+}
+
 }
 }
 /* ==========================
@@ -938,7 +1108,6 @@ footer{background:var(--char);border-top:1px solid rgba(201,168,108,.1);padding:
     <div class="port-item" data-cat="Pre-Wedding"><img src="images/Pre wedding/IMG_04.jpg" alt=""><div class="port-overlay"><p class="pi-cat">Pre-Wedding</p><p class="pi-name">Golden Dusk</p></div></div>
     <div class="port-item" data-cat="Bridal"><img src="images/Bridal/IMG_01.webp" alt=""><div class="port-overlay"><p class="pi-cat">Bridal</p><p class="pi-name">Radiant Bride</p></div></div>
     <div class="port-item" data-cat="Wedding"><img src="images/wedding/IMG_01.jpg" alt=""><div class="port-overlay"><p class="pi-cat">Wedding</p><p class="pi-name">Sacred Ceremony</p></div></div>
-    <div class="port-item" data-cat="Wedding"><img src="images/wedding/IMG_02.jpg" alt=""><div class="port-overlay"><p class="pi-cat">Wedding</p><p class="pi-name">Sacred Ceremony</p></div></div>
     <div class="port-item" data-cat="Wedding"><img src="images/wedding/IMG_03.JPG" alt=""><div class="port-overlay"><p class="pi-cat">Wedding</p><p class="pi-name">Sacred Ceremony</p></div></div>
     <div class="port-item" data-cat="Wedding"><img src="images/wedding/IMG_04.JPG" alt=""><div class="port-overlay"><p class="pi-cat">Wedding</p><p class="pi-name">Sacred Ceremony</p></div></div>
     <div class="port-item" data-cat="Reception"><img src="images/wedding/IMG_05.jpg" alt=""><div class="port-overlay"><p class="pi-cat">Reception</p><p class="pi-name">Inviting</p></div></div>
